@@ -6,4 +6,8 @@ SciPy 2019 tutorial
 * test with `pytest`
 * test coverage with `pytest --cov=hugs`
 * add repository to Travis
-
+* create and switch to a new branch `git checkout -b add-travis`
+* create a travis config file .travis.yml
+* add, commit, and push to github `git push --set-upstream origin add-travis`
+* in Github, check in the Pull requests tab if the Travis build has passed
+* If no problems, press Confirm merge request, and confirm merge
