@@ -3,14 +3,15 @@
 from hugs.calc import get_wind_dir, get_wind_speed, get_wind_components
 
 import numpy as np
-import pytest
 from numpy.testing import assert_almost_equal, assert_array_almost_equal
+
+import pytest
 
 
 def test_speed():
     """Test calculating wind speed."""
-    u = np.array([4., 2.,0., 0.])
-    v = np.array([0.,2., 4., 0.])
+    u = np.array([4., 2., 0., 0.])
+    v = np.array([0., 2., 4., 0.])
 
     speed = get_wind_speed(u, v)
 
@@ -37,6 +38,7 @@ def test_dir():
 
     assert_array_almost_equal(true_dir, direc, 4)
 
+
 def test_wind_comps_basic():
     """Test the basic wind component calculation."""
     speed = np.array([4, 4, 4, 4, 25, 25, 25, 25, 10.])
@@ -58,8 +60,8 @@ def test_wind_comps_scalar():
     assert_almost_equal(u, -4, 3)
     assert_almost_equal(v, 6.9282, 3)
 
+
 def test_warning_direction():
     """Test that warning is raised wind direction > 360."""
     with pytest.warns(UserWarning):
-        get_wind_components(3, 480)        
-
+        get_wind_components(3, 480)
