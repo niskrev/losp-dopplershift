@@ -15,3 +15,5 @@ install:
 
 script:
     - pytest --flake8
+    - cd docs
+    - make html

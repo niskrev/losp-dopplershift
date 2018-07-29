@@ -13,3 +13,11 @@ SciPy 2019 tutorial
 * If no problems, press Confirm merge request, and confirm merge
 * test for pep8 violations `pytest --flake8`
 * setup.cfg is a configuration file, there can specify flake8 warning to ignore
+* setup sphinx:
+  + `mkdir docs`
+  * `sphinx-quickstart` (in docs)
+  * `make html`
+  * `open build/html/index.html`
+  * see index.rst in docs
+  * adding sphinx.ext.napoleon in the conf.py file will use the numpy style of
+    docstrings
